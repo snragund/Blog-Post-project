@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{%extends 'star/Base.html'%}
+{%block child_block%}
+<div class="container" align="center">
+    <h1>Please provide the Information</h1>
+<form method="get" action="/search" >
+    {%csrf_token%}
+    <input type="search" value="Search Employee Id here" class="form-control mr-sm-2" placeholde="serach" name="query" id="query">
+    <button class="btn btn-primary btn-lg" type="submit">Search</button>
+</form><br>
+<h2>Insert employee details here</h2>
+<form method="post">
+    {{form.as_p}}
+    {%csrf_token%}
+    <input type="submit" value="Insert Record" class="btn btn-primary btn-lg">
+</form>
+    <br>
+    <a href="/show" class="btn btn-success btn-lg">Show Details</a> <a href="/salary" class="btn btn-success btn-lg">Salary Details</a>
+
+</div>
+{%endblock%}

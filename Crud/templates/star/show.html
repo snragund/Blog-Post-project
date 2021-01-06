@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{%extends 'star/Base.html'%}
+{%block child_block%}
+<div class="container" align="center"></div>
+    <h1>Information of Employees</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Employee Id</th>
+                <th>Which team</th>
+                <th>Hourly rate</th>
+                <th>Team Leader</th>
+                <th>Type of employee</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        {%for employee in employees%}
+        <tr>
+            <td>{{employee.Name}}</td>
+            <td>{{employee.Employee_Id}}</td>
+            <td>{{employee.Teams}}</td>
+            <td>{{employee.Hourly_rate}}</td>
+            <td>{{employee.Team_Leader}}</td>
+            <td>{{employee.Type_of_employee}}</td>
+            <td><a href="/delete/{{employee.id}}">Delete</a>/<a href="/update/{{employee.id}}">Update</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+{%endblock%}

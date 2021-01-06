@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{%extends 'star/Base.html'%}
+{%block child_block%}
+<div class="container" align="center">
+    <h1>Please update Carefully</h1>
+    <form method="post">
+        {%csrf_token%}
+        Name:<input type="text" name = "Name" value="{{employee.Name}}"><br>
+        Employee_Id:<input type="int" name = "Employee_Id" value="{{employee.Employee_Id}}"><br>
+        Teams:<input type="text" name = "Teams" value="{{employee.Teams}}"><br>
+        Hourly_rate:<input type="int" name = "Hourly_rate" value="{{employee.Hourly_rate}}"><br>
+        Month:<input type="int" name = "Month" value="{{employee.Month}}"><br>
+        Year:<input type="int" name = "Year" value="{{employee.Year}}"><br>
+        Monthly_salary:<input type="int" name = "Monthly_salary" value="{{employee.Monthly_salary}}"><br>
+        <!-- Team_Leader:<input type="text" name = "Team_Leader" value="{{employee.Team_Leader}}"><br>
+        Type_of_employee:<input type="text" name = "Type_of_employee" value="{{employee.Type_of_employee}}"><br> -->
+        <input type="submit" value="Update Record" class="btn btn-primary" name=""><br>
+        <a href="/show" class="btn btn-success btn-lg">Show Details</a>
+        
+    </form>
+</div>
+{%endblock%}
+

@@ -1,0 +1,7 @@
+django==3.1.5		# web app
+pytest==6.2.1		# Testing
+coverage==5.3.1		# Testing
+
+
+
+
